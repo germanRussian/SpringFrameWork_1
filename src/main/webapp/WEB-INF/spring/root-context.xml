@@ -15,12 +15,17 @@
 		<property name="password" value="smart"></property>
 	</bean>
 
-	<!-- hikariCP Config -->
+	<!-- hikariCP Config 커넥션 풀 -->
 	<bean id="dataSource" class="com.zaxxer.hikari.HikariDataSource"
 		destroy-method="close">
 		<constructor-arg ref="hikariConfig"></constructor-arg>
 	</bean>
 	
-	
+	<!-- 세션공장 -->
+	<bean id="sqlSessionFactory"
+		class="org.mybatis.spring.SqlSessionFactoryBean">
+		<property name="dataSource" ref="dataSource"></property>
+	</bean>
+
 
 </beans>
