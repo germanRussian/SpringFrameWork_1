@@ -95,7 +95,7 @@ String coupon = (String)request.getAttribute("coupon");
 			src="/resources/img/img03.png">실시간 버스 위치<img
 			src="/resources/img/ico_arrow2.png" class="fR">
 		</a> 
-		<a href="line.jsp"> <img src="views/img/img05.png">버스 노선 안내<img
+		<a href="line.jsp"> <img src="/resources/img/img05.png">버스 노선 안내<img
 			src="/resources/img/ico_arrow2.png" class="fR">
 		</a>
 	</div>
