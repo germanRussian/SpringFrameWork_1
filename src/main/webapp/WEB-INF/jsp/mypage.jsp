@@ -40,6 +40,7 @@ String coupon = (String)request.getAttribute("coupon");
 		alert("이 브라우저에서는 Geolocation이 지원되지 않습니다.")
 	}
 </script>
+<script src="webjars/jquery/3.6.0/dist/jquery.min.js"></script>
 </head>
 
 <body class="page02">
