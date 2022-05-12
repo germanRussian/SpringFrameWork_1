@@ -36,7 +36,7 @@ public class SmartController {
 	@RequestMapping(value = "/mypage", method = RequestMethod.GET)
 	public String mypage(Locale locale, Model model) {
 
-		// jsp 파일을 찾아라.
+		// jsp 파일을 찾아라.ㅇ
 		return "mypage";
 	}
 
