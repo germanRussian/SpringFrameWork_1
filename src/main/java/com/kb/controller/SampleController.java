@@ -7,7 +7,7 @@ import lombok.extern.log4j.Log4j;
 
 
 @Log4j
-@RequestMapping("/sample/")//도메인.sample/jsp파일
+@RequestMapping("/sample/*") // 적용 예시 : 도메인/sample/jsp파일
 @Controller
 public class SampleController {
 	
