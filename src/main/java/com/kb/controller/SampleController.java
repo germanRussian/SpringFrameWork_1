@@ -29,6 +29,9 @@ import lombok.extern.log4j.Log4j;
 @Controller
 public class SampleController {
 
+	//void, string, @ResponseBody, ResponseEntity<String>에 대한 학습.
+	
+	
 	@RequestMapping("/")
 	public void basic() {
 		log.info("----------------");
@@ -44,7 +47,7 @@ public class SampleController {
 		log.info("----------------post");
 	}
 
-	//void, string, @ResponseBody, ResponseEntity<String>
+	
 	
 	
 	// http://localhost/sample/ex01?name=이종혁&age=10; 주소창에 이렇게 주면 SampleDTO에서 정보를 받음.
