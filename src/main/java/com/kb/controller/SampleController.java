@@ -53,13 +53,21 @@ public class SampleController {
 	// http://localhost/sample/ex01?name=이종혁&age=10; 주소창에 이렇게 주면 SampleDTO에서 정보를 받음.
 	@GetMapping("/ex01") 
 	public String ex01(SampleDTO dto) {
-		log.info("bb");
+		//log.info("bb");
 		log.info(dto);
 		return "ex01";
 
 	}
 
 	 // http://localhost/sample/ex02?name=이종혁; 파라메타를 가져와서 스트링에 넣겠다.
+//	@GetMapping("/ex02")
+//	public String ex02(@RequestParam("name") String name ) {
+//		log.info(name);
+//		return "ex02";
+//
+//	}
+		
+	
 	@GetMapping("/ex02")
 	public String ex02(@RequestParam("name") String name, @RequestParam("age") int age) {
 		log.info(name);
@@ -96,7 +104,7 @@ public class SampleController {
 	
 	
 	
-	// 2.view페이지로 값을 전달하는 방식. / model 이용
+	//view페이지로 값을 전달하는 방식. / model 이용
 	//request.dispatcher //값을 보여줘라
 	//http://localhost/sample/ex05?name=제목&page=1
 	@GetMapping("/ex05")
@@ -106,7 +114,7 @@ public class SampleController {
 		return "sample/ex05";
 	}
 	
-	// 3.페이지로 이동해라
+	//페이지로 이동해라
 	//response.RedirectAttributes("aa", aa);
 	//http://localhost/sample/ex06?name=제목&age=100
 	@GetMapping("/ex06")
@@ -123,6 +131,7 @@ public class SampleController {
 	public String ex07( RedirectAttributes rttr) {
 		rttr.addFlashAttribute("name", "이종혁");
 		rttr.addFlashAttribute("age", 300);
+		rttr.addFlashAttribute("page", 3000000);
 		//return "redirect:/";
 		return "redirect:/sample/ex00";
 		
@@ -133,7 +142,12 @@ public class SampleController {
 		return "sample/ex05";
 	}
 	
-	// 4.리턴 : 객체 타입
+	
+	
+	
+	
+	
+	//리턴 : 객체 타입
 	//이것은 json 데이터이다.
 	@GetMapping("/ex08")
 	public @ResponseBody SampleDTO ex08() {
